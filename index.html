@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethery Web Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="landing-page">
+        <div class="logo-container">
+            <h1>AETHERY</h1>
+            <p>Tarayıcı Tabanlı Minecraft Portalı</p>
+        </div>
+        <div class="card-container">
+            <button class="play-btn" onclick="launchGame()">OYUNA BAŞLA</button>
+            <div class="server-info">
+                <span>Durum: <strong style="color: #4CAF50;">Aktif</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Oyunu çalıştıran Iframe/Canvas alanı -->
+    <div id="game-container" style="display: none;">
+        <button class="back-btn" onclick="closeGame()">Ana Menüye Dön</button>
+        <!-- Eaglercraft / Minecraft Web Client motorunu yükleyen Frame -->
+        <iframe id="game-frame" src="" frameborder="0"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
