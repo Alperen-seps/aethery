@@ -1,9 +1,8 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-// Your web app's Firebase configuration
+// Firebase Yapılandırman
 const firebaseConfig = {
   apiKey: "AIzaSyC-Gu1VOwoOlcK2sUYCI6kkszDY75XsGKs",
   authDomain: "aetherymodandservercommunity.firebaseapp.com",
@@ -14,15 +13,15 @@ const firebaseConfig = {
   measurementId: "G-X6HW7JXZF6"
 };
 
-// Initialize Firebase
+// Firebase Başlatma
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Aethery Hub Firebase ile Bağlandı.");
+    console.log("Aethery Hub Firebase Bağlantısı Başarılı.");
 
-    // Sayfa açıldığında sunucu ve modları veritabanından çek
+    // Sayfa açıldığında sunucu ve modları çek
     loadServersFromFirebase();
     loadModsFromFirebase();
 
@@ -90,6 +89,7 @@ async function loadServersFromFirebase() {
 
     try {
         const querySnapshot = await getDocs(collection(db, "servers"));
+        serverList.innerHTML = ""; // İçeriği temizle
         querySnapshot.forEach((doc) => {
             const server = doc.data();
             const newCard = document.createElement("div");
@@ -114,6 +114,7 @@ async function loadModsFromFirebase() {
 
     try {
         const querySnapshot = await getDocs(collection(db, "mods"));
+        modList.innerHTML = ""; // İçeriği temizle
         querySnapshot.forEach((doc) => {
             const mod = doc.data();
             const newCard = document.createElement("div");

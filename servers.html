@@ -26,23 +26,21 @@
             <form id="add-server-form">
                 <input type="text" id="server-name" placeholder="Sunucu Adı (Örn: AetheryCraft)" required>
                 <input type="text" id="server-ip" placeholder="Sunucu IP Adresi (Örn: play.aethery.net)" required>
-                <input type="text" id="server-desc" placeholder="Kısa Açıklama (Örn: Survival / Faction)" required>
+                <input type="text" id="server-desc" placeholder="Kısa Açıklama (Örn: 1.21.11 / Survival / Faction)" required>
                 <button type="submit" class="btn btn-primary">Sunucuyu Yayınla</button>
             </form>
         </div>
 
         <!-- Sunucuların Listelendiği Alan -->
         <div class="server-grid" id="server-list">
-            <!-- Örnek Sabit Sunucu -->
-            <div class="server-card">
-                <h3>Aethery Official Network</h3>
-                <p class="ip">IP: oyna.aethery.com</p>
-                <p class="mod-desc">Resmi topluluk sunucumuz, Yakında Sizlerle</p>
-                <span class="badge">Aktif</span>
-            </div>
+            <!-- Firebase verileri buraya dinamik olarak dolacak -->
         </div>
-    </div>!
+    </div>
 
-    <script src="script.js"></script>
+    <footer class="site-footer">
+        <p>Aethery Mod & Server Community | <strong>Owned BY ALPEREN_226</strong></p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>

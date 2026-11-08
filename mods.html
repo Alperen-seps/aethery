@@ -18,33 +18,30 @@
 
     <div class="content-container">
         <h2>Minecraft Mod Kütüphanesi</h2>
-        <p>En popüler modları, kaynak paketlerini ve haritaları buradan indirebilirsin.</p>
+        <p>Topluluk tarafından paylaşılan modları indir veya kendi modunu hemen yükle!</p>
 
-        <div class="mod-grid">
-            <!-- Mod Kartı 1 -->
-            <div class="mod-card">
-                <h3>OptiFine / FPS Boost</h3>
-                <p class="mod-desc">Oyun performansını artıran ve kasma sorunlarını çözen vazgeçilmez mod.</p>
-                <span class="mod-category">Optimizasyon</span>
-                <a href="#" class="btn-download">İndir (.jar / .zip)</a>
-            </div>
+        <!-- Mod Yükleme Formu -->
+        <div class="server-form-card">
+            <h3>+ Kendi Modunu Paylaş</h3>
+            <form id="add-mod-form">
+                <input type="text" id="mod-name" placeholder="Mod Adı (Örn: FPS Optimizer)" required>
+                <input type="text" id="mod-category" placeholder="Kategori (Örn: Optimizasyon / PvP / Harita)" required>
+                <input type="text" id="mod-desc" placeholder="Kısa Açıklama" required>
+                <input type="url" id="mod-link" placeholder="İndirme Linki (https://...)" required>
+                <button type="submit" class="btn btn-primary">Modu Yayınla</button>
+            </form>
+        </div>
 
-            <!-- Mod Kartı 2 -->
-            <div class="mod-card">
-                <h3>PvP Texture Pack (16x)</h3>
-                <p class="mod-desc">Savaşlarda daha iyi görüş açısı ve net kılıç modelleri sunan kaynak paketi.</p>
-                <span class="mod-category">Kaynak Paketi</span>
-                <a href="#" class="btn-download">İndir (.zip)</a>
-            </div>
-
-            <!-- Mod Kartı 3 -->
-            <div class="mod-card">
-                <h3>Minimap Modu</h3>
-                <p class="mod-desc">Harita üzerinde yönünü bulmanı ve yer işaretleri koymanı sağlar.</p>
-                <span class="mod-category">Oynanış</span>
-                <a href="#" class="btn-download">İndir (.jar)</a>
-            </div>
+        <!-- Modların Listelendiği Alan -->
+        <div class="mod-grid" id="mod-list">
+            <!-- Firebase verileri buraya dinamik olarak dolacak -->
         </div>
     </div>
+
+    <footer class="site-footer">
+        <p>Aethery Mod & Server Community | <strong>Owned BY ALPEREN_226</strong></p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>

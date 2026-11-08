@@ -67,7 +67,7 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
-    padding: 40px 20px;
+    padding: 60px 20px;
     background: radial-gradient(circle at center, rgba(46,125,50,0.15) 0%, rgba(15,15,18,1) 70%);
 }
 
@@ -151,12 +151,13 @@ body {
     border-radius: 50%;
 }
 
-/* İÇERİK KONTEYNERİ (MODLAR VE SUNUCULAR) */
+/* İÇERİK KONTEYNERİ */
 .content-container {
     padding: 40px 5%;
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
+    flex: 1;
 }
 
 .content-container h2 {
@@ -186,13 +187,13 @@ body {
     font-size: 1.2rem;
 }
 
-#add-server-form {
+#add-server-form, #add-mod-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-#add-server-form input {
+#add-server-form input, #add-mod-form input {
     padding: 12px 15px;
     background: #0f0f12;
     border: 1px solid #2a2a30;
@@ -202,21 +203,19 @@ body {
     width: 100%;
 }
 
-#add-server-form input:focus {
+#add-server-form input:focus, #add-mod-form input:focus {
     border-color: #55FF55;
     outline: none;
 }
 
-/* KART GRID YAPILARI (MOD VE SUNUCU KARTLARI) */
-.mod-grid,
-.server-grid {
+/* KART GRID YAPILARI */
+.mod-grid, .server-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.mod-card,
-.server-card {
+.mod-card, .server-card {
     background: #18181c;
     padding: 22px;
     border-radius: 10px;
@@ -227,14 +226,12 @@ body {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.mod-card:hover,
-.server-card:hover {
+.mod-card:hover, .server-card:hover {
     border-color: #2e7d32;
     transform: translateY(-3px);
 }
 
-.mod-card h3,
-.server-card h3 {
+.mod-card h3, .server-card h3 {
     color: #55FF55;
     font-size: 1.2rem;
     margin-bottom: 8px;
@@ -259,8 +256,7 @@ body {
     border: 1px solid #222;
 }
 
-.mod-category,
-.badge {
+.mod-category, .badge {
     display: inline-block;
     background: #222228;
     color: #aaa;
@@ -282,7 +278,23 @@ body {
     font-size: 0.9rem;
     transition: background-color 0.2s ease;
 }
-git
+
 .btn-download:hover {
     background-color: #388e3c;
+}
+
+/* FOOTER (ALPEREN_226 İMZASI) */
+.site-footer {
+    text-align: center;
+    padding: 25px 20px;
+    background: #121216;
+    border-top: 1px solid #2a2a30;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.site-footer strong {
+    color: #55FF55;
+    letter-spacing: 0.5px;
 }
