@@ -1,173 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #0f0f12;
-    color: #ffffff;
-    min-height: 100vh;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
+/* Sunucu Ekleme Formu Tasarımı */
+.server-form-card {
     background: #18181c;
-    border-bottom: 2px solid #2e7d32;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #55FF55;
-}
-
-.logo span {
-    font-size: 0.8rem;
-    color: #888;
-}
-
-.nav-links a {
-    color: #ccc;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: #55FF55;
-}
-
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 80px);
-    background: radial-gradient(circle, rgba(46,125,50,0.15) 0%, rgba(15,15,18,1) 100%);
-}
-
-.hero-card {
-    text-align: center;
-    background: #18181c;
-    padding: 40px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 10px;
     border: 1px solid #333;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.hero-card h1 {
-    font-size: 2.5rem;
-    color: #55FF55;
-    margin-bottom: 10px;
-}
-
-.hero-card p {
-    color: #aaa;
+    margin-top: 25px;
     margin-bottom: 30px;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 20px;
+.server-form-card h3 {
+    color: #55FF55;
+    margin-bottom: 15px;
 }
 
-.btn {
-    padding: 12px 28px;
+#add-server-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#add-server-form input {
+    padding: 12px;
+    background: #0f0f12;
+    border: 1px solid #333;
     border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-.btn-primary {
-    background-color: #2e7d32;
     color: white;
+    font-size: 0.95rem;
 }
 
-.btn-primary:hover {
-    background-color: #388e3c;
+#add-server-form input:focus {
+    border-color: #55FF55;
+    outline: none;
 }
 
-.btn-secondary {
-    background-color: #333;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: #444;
-}
-
-.status-badge {
-    color: #888;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-}
-
-/* Oyun Sayfası */
-.game-body {
-    overflow: hidden;
-    height: 100vh;
-}
-
-.game-header {
-    height: 40px;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-}
-
-.btn-back {
-    color: #ff5555;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-.game-title {
-    color: #888;
-    font-size: 0.85rem;
-}
-
-.iframe-container {
-    width: 100vw;
-    height: calc(100vh - 40px);
-}
-
-#mc-canvas {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Sunucular Sayfası */
-.content-container {
-    padding: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
+/* Sunucu Kartları */
 .server-grid {
-    margin-top: 20px;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 15px;
 }
 
@@ -180,19 +49,22 @@ body {
 
 .server-card h3 {
     color: #55FF55;
+    margin-bottom: 5px;
 }
 
 .server-card .ip {
-    color: #aaa;
+    color: #fff;
     font-family: monospace;
-    margin-top: 5px;
+    font-weight: bold;
+    background: #111;
+    padding: 5px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
-.badge {
-    display: inline-block;
-    margin-top: 10px;
-    background: #2e7d32;
-    padding: 3px 8px;
-    font-size: 0.75rem;
-    border-radius: 4px;
+.mod-desc {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }

@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aethery - Sunucu Listesi</title>
+    <title>Aethery - Sunucu Forumu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">AETHERY <span>v1.21.11</span></div>
+        <div class="logo">AETHERY <span>Server Hub</span></div>
         <div class="nav-links">
             <a href="index.html">Ana Sayfa</a>
-            <a href="play.html">Oyna</a>
+            <a href="mods.html">Modlar</a>
             <a href="servers.html" class="active">Sunucular</a>
         </div>
     </nav>
 
     <div class="content-container">
-        <h2>Desteklenen WebSocket Sunucuları</h2>
-        <p>Oyun içerisindeki Çok Oyunculu (Multiplayer) menüsünden bu adreslerle giriş yapabilirsin:</p>
+        <h2>Topluluk Sunucu Forumu</h2>
+        <p>Kendi Minecraft sunucunun IP adresini paylaş, oyuncu kitleni büyüt!</p>
 
-        <div class="server-grid">
+        <!-- Sunucu Ekleme Formu -->
+        <div class="server-form-card">
+            <h3>+ Sunucunu Ekle</h3>
+            <form id="add-server-form">
+                <input type="text" id="server-name" placeholder="Sunucu Adı (Örn: AetheryCraft)" required>
+                <input type="text" id="server-ip" placeholder="Sunucu IP Adresi (Örn: play.aethery.net)" required>
+                <input type="text" id="server-desc" placeholder="Kısa Açıklama (Örn: Survival / Faction)" required>
+                <button type="submit" class="btn btn-primary">Sunucuyu Yayınla</button>
+            </form>
+        </div>
+
+        <!-- Sunucuların Listelendiği Alan -->
+        <div class="server-grid" id="server-list">
+            <!-- Örnek Sabit Sunucu -->
             <div class="server-card">
-                <h3>Aethery Official Gateway</h3>
-                <p class="ip">wss://aethery-server.net</p>
-                <span class="badge">Önerilen</span>
-            </div>
-            <div class="server-card">
-                <h3>AesirMC Web Gateway</h3>
-                <p class="ip">wss://play.aesirmc.net</p>
+                <h3>Aethery Official Network</h3>
+                <p class="ip">IP: play.aethery.net</p>
+                <p class="mod-desc">Resmi topluluk sunucumuz, herkes davetlidir!</p>
                 <span class="badge">Aktif</span>
             </div>
         </div>
