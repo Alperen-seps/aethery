@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethery - Kurucu & Yönetici Paneli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AETHERY <span>Admin Panel</span></div>
+        <div class="nav-links">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="mods.html">Modlar</a>
+            <a href="servers.html">Sunucular</a>
+            <a href="apply.html">Başvuru</a>
+            <a href="admin.html" class="active" style="color: #ff5555;">Yönetici Paneli</a>
+            <a href="login.html" id="nav-auth-link">Giriş Yap</a>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <h2 style="color: #ff5555;">Gelişmiş Yönetici Paneli (Owned BY ALPEREN_226)</h2>
+
+        <!-- HIZLI MUTE & BAN MODÜLÜ -->
+        <div class="server-form-card" style="margin-top: 20px;">
+            <h3>⚡ Ceza & Yetki İşlemleri</h3>
+            <form id="punish-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <input type="text" id="target-username" placeholder="Kullanıcı Adı" required style="flex: 1;">
+                <select id="punish-type" style="padding: 12px; background: #0f0f12; color: white; border: 1px solid #2a2a30; border-radius: 6px;">
+                    <option value="MUTE">Mute (Sustur)</option>
+                    <option value="BAN">Ban (Yasakla)</option>
+                    <option value="SET_ROLE">Rol Değiştir</option>
+                </select>
+                <select id="punish-time" style="padding: 12px; background: #0f0f12; color: white; border: 1px solid #2a2a30; border-radius: 6px;">
+                    <option value="30">30 Dakika</option>
+                    <option value="60">1 Saat</option>
+                    <option value="1440">1 Gün</option>
+                    <option value="-1">Sınırsız / Kalıcı</option>
+                </select>
+                <select id="select-role" style="display: none; padding: 12px; background: #0f0f12; color: white; border: 1px solid #2a2a30; border-radius: 6px;">
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="MOD">MODERATÖR</option>
+                    <option value="REHBER">REHBER</option>
+                    <option value="OYUNCU">OYUNCU</option>
+                </select>
+                <button type="submit" class="btn btn-primary" style="background: #d32f2f;">Uygula</button>
+            </form>
+        </div>
+
+        <h3 style="margin-top: 30px;">📄 Gelen Yetkili Başvuruları</h3>
+        <div id="applications-list" style="margin-top: 15px; display: flex; flex-direction: column; gap: 15px;"></div>
+
+        <h3 style="margin-top: 30px;">👥 Kayıtlı Tüm Kullanıcılar & Rolleri</h3>
+        <div id="users-list" style="margin-top: 15px; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px;"></div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Aethery Mod & Server Community | <strong>Owned BY ALPEREN_226</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

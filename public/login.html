@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethery - Giriş / Kayıt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AETHERY <span>Auth</span></div>
+        <div class="nav-links">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="mods.html">Modlar</a>
+            <a href="servers.html">Sunucular</a>
+            <a href="apply.html">Başvuru</a>
+            <a href="admin.html" id="nav-admin-link" style="display: none; color: #ff5555;">Yönetici Paneli</a>
+            <a href="login.html" class="active">Giriş / Kayıt</a>
+        </div>
+    </nav>
+
+    <div class="content-container auth-container">
+        <div class="server-form-card">
+            <h3 id="form-title">Kayıt Ol</h3>
+            <form id="auth-form">
+                <input type="text" id="auth-username" placeholder="Kullanıcı Adı" required>
+                <input type="password" id="auth-password" placeholder="Şifre" required>
+                <button type="submit" class="btn btn-primary" id="auth-btn">Kayıt Ol</button>
+            </form>
+            <p style="margin-top: 15px; text-align: center; color: #aaa; font-size: 0.9rem;">
+                <span id="toggle-text">Zaten hesabın var mı?</span>
+                <a href="#" id="toggle-auth-mode" style="color: #55FF55; text-decoration: underline;">Giriş Yap</a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Aethery Mod & Server Community | <strong>Owned BY ALPEREN_226</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

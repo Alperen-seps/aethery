@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethery - Yetkili Başvurusu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AETHERY <span>Başvuru</span></div>
+        <div class="nav-links">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="mods.html">Modlar</a>
+            <a href="servers.html">Sunucular</a>
+            <a href="apply.html" class="active">Başvuru</a>
+            <a href="admin.html" id="nav-admin-link" style="display: none; color: #ff5555;">Yönetici Paneli</a>
+            <a href="login.html" id="nav-auth-link">Giriş Yap</a>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <h2>Yetkili Başvuru Formu</h2>
+        <p>Ekibimize katılmak ve topluluğumuzu yönetmek için formu eksiksiz doldur.</p>
+
+        <div class="server-form-card">
+            <h3>+ Yetkililik Başvurusu Gönder</h3>
+            <form id="apply-form">
+                <input type="text" id="apply-name" placeholder="Adın ve Soyadın" required>
+                <input type="text" id="apply-age" placeholder="Yaşın" required>
+
+                <!-- İstediğin Rol Seçenekleri (Admin, Moderatör, Rehber, Developer) -->
+                <select id="apply-role" required style="padding: 12px 15px; background: #0f0f12; border: 1px solid #2a2a30; border-radius: 6px; color: #ffffff; font-size: 0.95rem; width: 100%;">
+                    <option value="" disabled selected>Başvurmak İstediğin Rolü Seç</option>
+                    <option value="ADMIN">Admin</option>
+                    <option value="MODERATÖR">Moderatör</option>
+                    <option value="REHBER">Rehber</option>
+                    <option value="DEVELOPER">Developer</option>
+                </select>
+
+                <input type="text" id="apply-experience" placeholder="Daha önceki tecrübelerin..." required>
+                <button type="submit" class="btn btn-primary">Başvuruyu Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Aethery Mod & Server Community | <strong>Owned BY ALPEREN_226</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
